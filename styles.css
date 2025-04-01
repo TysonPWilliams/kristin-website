@@ -1,0 +1,50 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #B6F6EA;
+    color: #1A806D;
+    margin: 0;
+    padding: 0;
+}
+header {
+    background-color: #75D6C4;
+    padding: 20px;
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+}
+.container {
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding: 40px 0;
+}
+.hero {
+    background: url('https://source.unsplash.com/1600x900/?plants,nature') no-repeat center center/cover;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 32px;
+    font-weight: bold;
+}
+.services {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.service {
+    background: white;
+    width: 30%;
+    padding: 20px;
+    margin: 10px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+footer {
+    background-color: #1A806D;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+}
