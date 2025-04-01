@@ -5,12 +5,82 @@ body {
     margin: 0;
     padding: 0;
 }
+.poiret-one-regular {
+    font-family: "Poiret One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
 header {
-    background-color: #75D6C4;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    background-color: #FFFFFF;
     padding: 20px;
     text-align: center;
-    font-size: 24px;
+    font-size: 16px;
     font-weight: bold;
+    max-height: 15vh;
+    border-bottom: 2px solid #1A806D;
+}
+header img {
+    max-height: 15vh;
+    text-align: center;
+    padding-left: 10vw;
+}
+ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+}
+.header-menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    list-style: none;
+}
+.header-menu a {
+    border: #1A806D solid 2px;
+    border-radius: 10px;
+    padding: 15px;
+    background-color: #1A806D;
+    text-decoration: none;
+    color: white;
+}
+.header-menu a:hover {
+    background-color: #B6F6EA;
+    color: #1A806D;
+}
+.hero-section {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: #FFFFFF;
+}
+.hero-section img {
+    max-width: 100%;
+    border-radius: 40%;
+    padding: 20px;
+}
+.hero-headings {
+    font-family: 'Poiret One', serif;
+    background-color: #75D6C4;
+    border-radius: 50%;
+    padding: 120px 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.hero-headings h2 {
+    font-size: 36px;
+    color: #000000;
+}
+.hero-headings h3 {
+    color: #000000;
 }
 .container {
     width: 80%;
@@ -24,7 +94,7 @@ header {
     display: flex;
     align-items: center;
     justify-content: center;
-    color: white;
+    color: #000000;
     font-size: 32px;
     font-weight: bold;
 }
@@ -48,3 +118,16 @@ footer {
     padding: 20px;
     margin-top: 40px;
 }
+
+@media screen and (max-width: 400px) {
+    .hero-section {
+        flex-direction: column;
+    }
+    .hero-section img {
+        width: 100%;
+        height: auto;
+        border-radius: 0;
+        padding: 0;
+    }
+} 
+    
