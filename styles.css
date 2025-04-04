@@ -1,5 +1,6 @@
 body {
     font-family: 'Poiret One', sans-serif;
+    font-weight: 600;
     background-color: #B6F6EA;
     color: #1A806D;
     margin: 0;
@@ -74,6 +75,75 @@ header {
     object-position: center;
 }
 
+.problem-solution {
+    padding: 4rem 2rem;
+    background-color: #f9fdfb;
+    font-family: 'Poiret One', sans-serif;
+  }
+  
+  .grid-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+  
+  .problem-box,
+  .solution-box {
+    background-color: #ffffff;
+    border-radius: 16px;
+    padding: 2rem;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    flex: 1;
+  }
+  
+  .problem-box h3,
+  .solution-box h3 {
+    font-size: 1.8rem;
+    color: #316749;
+    margin-bottom: 1rem;
+  }
+  
+  .problem-box ul,
+  .solution-box ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .problem-box li,
+  .solution-box li {
+    margin-bottom: 0.8rem;
+    font-size: 1.1rem;
+  }
+
+  .problem-box img, 
+  .solution-box img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 30vw;
+    border-radius: 20px;
+  }
+  
+  .cta-button {
+    display: flex;
+    font-size: 1.5rem;
+    justify-content: center;
+    margin-top: 1.5rem;
+    padding: 0.75rem 1.5rem;
+    background-color: #88b088;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+  }
+  
+  .cta-button:hover {
+    background-color: #6a936a;
+  }
+  
+  
+
 .hero {
     display: flex;
     justify-content: space-between;
@@ -125,3 +195,10 @@ footer {
     text-align: center;
     padding: 20px;
 }
+
+/* Responsive layout */
+@media (min-width: 768px) {
+    .grid-container {
+      flex-direction: row;
+    }
+  }
