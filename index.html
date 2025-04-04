@@ -3,40 +3,50 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Holistic Therapy</title>
+    <title>Koselig Holistic Family Support</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Poiret+One&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poiret+One&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
         <div class="header-image">
             <img src="images/logo.jpg" alt="Koselig Holistic Family Support Logo">
         </div>
-        <div></div> <!-- Empty Div -->
-        <div class="header-menu">
+        <nav class="header-menu">
             <ul>
-                <li>Home</li>
-                <li>Services</li>
-                <li>Contact Us</li>
+                <li><a href="#">Home</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#contact">Contact Us</a></li>
             </ul>
-            <a href="#">Make a Booking</a>
-        </div>
+            <a class="booking-btn" href="#booking">Make a Booking</a>
+        </nav>
     </header>
-    <div class="hero-section">
-        <div class="hero-image">
-            <img src="images/kristin.jpg" alt="Smiling photo of Kristin">
+    
+    <section class="hero-background">
+        <img src="images/Koselig Holistic Family Support.png" alt="Murray River">
+        <!-- <div class="hero-text">
+            <h2>Koselig Holistic Family Support</h2>
+            <p>Embrace Nature, Heal Within</p>
+        </div> -->
+    </section>
+
+    <section class="hero">
+        <div id="leaves">
+            <img src="images/watercolour-leaves.png" alt="">
+            <!-- <div id="green-bubble">
+                <h3>Holistic Therapy and Capacity Building Support</h3>
+                <p>"Neurodivergent Professionals supporting Neurodivergent Families."</p>
+                <h3>Professional Expertise with a Holistic Approach</h3>
+            </div> -->
         </div>
-        <div class="hero-headings">
-            <h2>Holistic Therapy and <br> Capacity Building Supports</h2>
-            <h3>Combining Professional Qualifications, High Level Training and Expertise with a holistic approach</h3>
+        <div class="hero-container">
+            <img id="kristin" src="images/kristin-quote.png" alt="Kristin - Holistic Therapist">
         </div>
-    </div>
-    <div class="hero">
-        Embrace Nature, Heal Within
-    </div>
-    <div class="container">
+    </section>
+
+    <section id="services" class="container">
         <h2>Our Services</h2>
         <div class="services">
             <div class="service">
@@ -52,7 +62,8 @@
                 <p>Find inner peace with guided meditation and yoga.</p>
             </div>
         </div>
-    </div>
+    </section>
+
     <footer>
         &copy; 2025 Koselig Holistic Family Support | Designed with Nature in Mind
     </footer>
