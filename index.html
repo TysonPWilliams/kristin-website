@@ -8,19 +8,34 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poiret+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poiret+One&family=Raleway:wght@400;700;800&display=swap" rel="stylesheet">
+    <script src="./script.js"></script>
 </head>
 <body>
     <header>
         <div class="header-image">
             <img src="images/logo.jpg" alt="Koselig Holistic Family Support Logo">
         </div>
-        <nav class="header-menu">
-            <ul>
+        
+        <div class="hamburger" onclick="openMenu()">&#9776;</div> <!-- Hamburger Icon -->
+        
+        <nav class="fullscreen-menu" id="fullscreen-menu">
+            <span class="close-menu" onclick="closeMenu()">&times;</span>
+            <ul class="menu-list">
                 <li><a href="#">Home</a></li>
                 <li><a href="#services">Services</a></li>
                 <li><a href="#contact">Contact Us</a></li>
             </ul>
             <a class="booking-btn" href="#booking">Make a Booking</a>
+            <script>
+                function openMenu() {
+                    document.getElementById("fullscreen-menu").classList.add("show");
+                }
+                
+                function closeMenu() {
+                    document.getElementById("fullscreen-menu").classList.remove("show");
+                }
+            </script>
         </nav>
     </header>
     
@@ -46,14 +61,16 @@
           <div class="solution-box">
             <h3>Here’s how Koselig helps</h3>
             <ul>
-              <li>Lived-experience support backed by professional training</li>
-              <li>In-home, school & online therapy options</li>
-              <li>Specialist autism & ADHD coaching and holistic supports</li>
+              <li>Support from professionals who truly understand - combining lived experience with expert training</li>
+              <li>Flexible therapy options - we come to your home, meet at school, or connect online</li>
+              <li>Specialist care for Autism and ADHD – personalised coaching and holistic, whole-family support</li>
             </ul>
             <img src="images/happy-mum.jpg" alt="">
           </div>
         </div>
-        <a href="#contact" class="cta-button">Book a Free Consultation</a>
+        <div class="cta-wrapper">
+            <a href="#contact" class="cta-button">Book a Free Consultation</a>
+        </div>
       </section>
 
     <section class="hero">
@@ -74,16 +91,36 @@
         <h2>Our Services</h2>
         <div class="services">
             <div class="service">
-                <h3>Aromatherapy</h3>
-                <p>Experience healing through the power of essential oils.</p>
+                <h3>Capacity Building Supports (NDIS)</h3>
+                <p>Personalised support tailored to NDIS goals, with one-on-one therapy, coaching, and written assessments </p>
             </div>
             <div class="service">
-                <h3>Herbal Medicine</h3>
-                <p>Natural remedies to support your mind and body.</p>
+                <h3>Mobile Social Work Support</h3>
+                <p>In-home and school-based therapy delivered as part of an integrated, collaborative team approach.</p>
             </div>
             <div class="service">
-                <h3>Meditation & Yoga</h3>
-                <p>Find inner peace with guided meditation and yoga.</p>
+                <h3>AUTPlay Therapy</h3>
+                <p>Autism-specific play therapy designed for the whole family, including dedicated parent sessions.</p>
+            </div>
+            <div class="service">
+                <h3>Therapeutic Counselling (ACT, CBT, SFT)</h3>
+                <p>Evidence-based therapy for trauma, PTSD, anxiety, and emotional regulation using Acceptance Commitment Therapy, CBT, and Solution-Focused Therapy.</p>
+            </div>
+            <div class="service">
+                <h3>Autism & ADHD Specialist Support</h3>
+                <p>Holistic, neuro-affirming care for individuals and families navigating Autism and ADHD.</p>
+            </div>
+            <div class="service">
+                <h3>Therapeutic Group Work</h3>
+                <p>Small group therapy to build connection, communication, and self-confidence in a safe and supportive environment.</p>
+            </div>
+            <div class="service">
+                <h3>ADHD Coaching & Therapy</h3>
+                <p>Practical strategies and emotional support tailored to living with ADHD, for both children and adults.</p>
+            </div>
+            <div class="service">
+                <h3>Parent Therapy & Behaviour Support</h3>
+                <p>Empowering parents with strategies and guidance to support children with ASD, ADHD, PDA, SPD, and anxiety.</p>
             </div>
         </div>
     </section>

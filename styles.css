@@ -16,6 +16,7 @@ header {
     border-bottom: 2px solid #1A806D;
     font-size: 1.3rem;
     font-weight: 600;
+    position: relative;
 }
 
 .header-image img {
@@ -23,12 +24,12 @@ header {
     max-height: 10vw;
 }
 
-.header-menu {
+.fullscreen-menu {
     display: flex;
     align-items: center;
 }
 
-.header-menu ul {
+.fullscreen-menu ul {
     list-style: none;
     display: flex;
     gap: 20px;
@@ -36,7 +37,7 @@ header {
     margin: 0;
 }
 
-.header-menu li a, .booking-btn {
+.fullscreen-menu li a, .booking-btn {
     text-decoration: none;
     color: #1A806D;
     padding: 10px 15px;
@@ -44,7 +45,7 @@ header {
     transition: all 0.3s;
 }
 
-.header-menu li a:hover {
+.fullscreen-menu li a:hover {
     background-color: #1A806D;
     color: white;
 }
@@ -77,71 +78,89 @@ header {
 
 .problem-solution {
     padding: 4rem 2rem;
-    background-color: #f9fdfb;
-    font-family: 'Poiret One', sans-serif;
-  }
-  
-  .grid-container {
+    background-color: #1A806D; /* Dark green background */
+    color: #ffffff; /* Light text */
+}
+
+.grid-container {
     display: flex;
     flex-direction: column;
     gap: 2rem;
-  }
-  
-  .problem-box,
-  .solution-box {
-    background-color: #ffffff;
+}
+
+.problem-box,
+.solution-box {
+    background-color: #B6F6EA; /* Light aqua boxes */
     border-radius: 16px;
     padding: 2rem;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
     flex: 1;
-  }
-  
-  .problem-box h3,
-  .solution-box h3 {
+    color: #1A806D; /* Match the green theme */
+}
+
+.problem-box h3,
+.solution-box h3 {
     font-size: 1.8rem;
-    color: #316749;
+    color: #1A806D; /* Dark green for headings */
     margin-bottom: 1rem;
-  }
-  
-  .problem-box ul,
-  .solution-box ul {
+}
+
+.problem-box ul,
+.solution-box ul {
     list-style: none;
     padding: 0;
-  }
-  
-  .problem-box li,
-  .solution-box li {
+}
+
+.problem-box li,
+.solution-box li {
     margin-bottom: 0.8rem;
     font-size: 1.1rem;
-  }
+}
 
-  .problem-box img, 
-  .solution-box img {
+.problem-box img,
+.solution-box img {
     display: flex;
     justify-content: center;
     align-items: center;
     max-width: 30vw;
     border-radius: 20px;
-  }
+}
   
-  .cta-button {
+.cta-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+    background-color: #1A806D; /* Dark green background */
+    padding: 20px;
+    border-radius: 8px; /* Rounded corners */
+}
+
+.cta-button {
     display: flex;
     font-size: 1.5rem;
     justify-content: center;
-    margin-top: 1.5rem;
+    align-items: center;
+    text-align: center;
     padding: 0.75rem 1.5rem;
-    background-color: #88b088;
-    color: white;
+    background-color: #A0E5D6; /* Light green button */
+    color: #1A806D;
     text-decoration: none;
     border-radius: 8px;
     font-weight: bold;
-    transition: background-color 0.3s ease;
-  }
-  
-  .cta-button:hover {
-    background-color: #6a936a;
-  }
-  
+    transition: background-color 0.3s ease, transform 0.3s ease;;
+    max-width: fit-content;
+}
+
+.cta-button:hover {
+    background-color: #75D6C4;
+    color: #1A806D; /* Darker green on hover */
+    transform: scale(1.1);
+}
+
+.cta-wrapper .cta-button:hover {
+    background-color: #75D6C4; /* Ensures hover color change */
+}
   
 
 .hero {
@@ -175,18 +194,49 @@ header {
     padding: 40px;
 }
 
+#services {
+    padding: 60px 20px;
+    background-color: #1A806D; /* Deep green background */
+    text-align: center;
+    color: #ffffff; /* Light text */
+}
+
+#services h2 {
+    font-family: 'Raleway', sans-serif;
+    font-size: 1.8rem;
+    color: #ffffff;
+}
+
 .services {
     display: flex;
-    justify-content: space-around;
     flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 30px;
+    margin-top: 40px;
 }
 
 .service {
-    background: white;
-    width: 30%;
+    background-color: #B6F6EA; /* Light aqua for contrast */
     padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 16px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    transition: transform 0.3s;
+    flex: 1 1 300px;
+    max-width: 400px;
+    color: #1A806D; /* Match the green theme */
+}
+
+.service h3 {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 800;
+    font-size: 1rem;
+    color: #1A806D;
+}
+
+.service:hover {
+    transform: translateY(-5px);
+    background-color: #A0E5D6; /* Slight hover tint */
 }
 
 footer {
@@ -196,9 +246,125 @@ footer {
     padding: 20px;
 }
 
+
 /* Responsive layout */
 @media (min-width: 768px) {
     .grid-container {
       flex-direction: row;
     }
   }
+
+@media screen and (max-width: 400px) {
+    .hero {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #leaves {
+        display: none;
+    }
+
+    .cta-button {
+        font-size: 5vw;
+    }
+
+    .grid-container img {
+        max-width: 100%;
+    }
+
+    .hero-background {
+        max-height: 20vh;
+        overflow: hidden;
+        position: relative;
+    }
+
+    .hero-background img {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 150%; 
+        height: 150%; 
+        object-fit: cover; 
+        object-position: center; 
+    }
+}
+
+/* Mobile Navigation (Hamburger Menu) */
+@media screen and (max-width: 768px) {
+    .hamburger{
+        font-size: 24px;
+        color: #1A806D;
+        cursor: pointer;
+    }
+    .fullscreen-menu {
+        display: none; /* Hidden by default */
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(255, 245, 230, 0.95); /* Slightly transparent background */
+        backdrop-filter: blur(8px); /* Blurred background effect */
+        z-index: 1000;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    /* Navigation links */
+    .fullscreen-menu ul {
+        list-style: none;
+        padding: 0;
+        text-align: center;
+    }
+
+    .fullscreen-menu ul li {
+        margin: 20px 0;
+    }
+
+    .fullscreen-menu ul li a {
+        font-size: 24px;
+        text-decoration: none;
+        font-weight: bold;
+        transition: color 0.3s ease-in-out;
+    }
+
+    .fullscreen-menu ul li a:hover {
+        color: #FFFFFF;
+        background-color: #1A806D;
+    }
+
+    ul.menu-list.show {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    a.booking-btn {
+        margin-top: 10vh;
+    }
+
+    /* Close button */
+    .close-menu {
+        position: absolute;
+        top: 20px;
+        left: 20px;
+        font-size: 20vw;
+        cursor: pointer;
+        font-weight: bold;
+        transition: color 0.3s ease;
+    }
+
+    .close-menu:hover {
+        color: #A34F2A;
+    }
+
+    /* Show fullscreen menu */
+    .fullscreen-menu.show {
+        display: flex;
+    }
+
+}
