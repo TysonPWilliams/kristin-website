@@ -293,7 +293,7 @@ footer {
 /* Mobile Navigation (Hamburger Menu) */
 @media screen and (max-width: 768px) {
     .hamburger{
-        font-size: 24px;
+        font-size: 10vw;
         color: #1A806D;
         cursor: pointer;
     }
@@ -310,6 +310,10 @@ footer {
         flex-direction: column;
         justify-content: center;
         align-items: center;
+    }
+
+    .header-image img {
+        max-height: 30vw;
     }
 
     /* Navigation links */
@@ -336,6 +340,14 @@ footer {
     }
 
     ul.menu-list.show {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    ul.menu-list {
         display: flex;
         flex-direction: column;
         justify-content: center;
