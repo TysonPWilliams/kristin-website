@@ -13,3 +13,13 @@ document.addEventListener("DOMContentLoaded", function() {
         menu.classList.remove("show");
     });
 });
+
+// JavaScript to make the header slide down when scrolling
+window.onscroll = function() {
+    var header = document.querySelector('header');
+    if (window.pageYOffset > 100) {  // Change '100' to whatever scroll position suits you
+        header.classList.add('fixed');
+    } else {
+        header.classList.remove('fixed');
+    }
+};
