@@ -354,7 +354,7 @@ footer {
     }
   }
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 767px) {
     .hero {
         display: flex;
         flex-direction: column;
@@ -406,7 +406,7 @@ footer {
 }
 
 /* Mobile Navigation (Hamburger Menu) */
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
     .hamburger{
         font-size: 10vw;
         color: #1A806D;
